@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.example.databasesqlite.handlers.MyDbHandler;
 
@@ -20,6 +21,7 @@ import java.util.Calendar;
 public class MainActivity extends AppCompatActivity {
     EditText date, breakfast, lunch, snacks, dinner;
     Button addData, listdata, PickDate;
+    Toolbar toolbar;
 
 
     @Override
@@ -35,6 +37,11 @@ public class MainActivity extends AppCompatActivity {
         addData = findViewById(R.id.addData);
         listdata = findViewById(R.id.listdata);
         PickDate = findViewById(R.id.PickDate);
+
+        toolbar= findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+
 
 
         PickDate.setOnClickListener(new View.OnClickListener() {
