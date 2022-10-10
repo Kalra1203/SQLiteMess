@@ -1,6 +1,7 @@
 package com.example.databasesqlite;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ public class UpdateData extends AppCompatActivity {
     Button updateData, deleteData;
     MyDbHandler dbHandler;
     String dateupdate, breakfastupdate, lunchupdate, snacksupdate, dinnerupdate;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,9 @@ public class UpdateData extends AppCompatActivity {
         updateDinner = findViewById(R.id.updateDinner);
         updateData = findViewById(R.id.updateData);
         deleteData = findViewById(R.id.deleteData);
+        toolbar= findViewById(R.id.toolbar);
+
+        setSupportActionBar(toolbar);
 
         dbHandler = new MyDbHandler(UpdateData.this);
 

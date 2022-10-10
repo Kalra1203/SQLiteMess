@@ -1,6 +1,7 @@
 package com.example.databasesqlite;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -17,6 +18,7 @@ public class ViewData extends AppCompatActivity {
     public ArrayList<Model> courseModalArrayList;
     public MyDbHandler dbHandler;
     public MyAdapter courseRVAdapter;
+    Toolbar toolbar;
 
 
     @Override
@@ -27,6 +29,9 @@ public class ViewData extends AppCompatActivity {
         recyclerView= findViewById(R.id.recyclerView);
         courseModalArrayList = new ArrayList<>();
         dbHandler = new MyDbHandler(ViewData.this);
+        toolbar= findViewById(R.id.toolbar);
+
+        setSupportActionBar(toolbar);
 
 
         courseModalArrayList = dbHandler.readCourses();
