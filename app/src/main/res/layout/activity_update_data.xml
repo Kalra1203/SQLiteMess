@@ -86,7 +86,7 @@
 
         android:ems="10"
         android:hint="DD/MM/YY"
-        android:maxLength="8"
+        android:maxLength="15"
         android:inputType="date"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="parent" />

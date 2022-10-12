@@ -7,128 +7,146 @@
     >
 
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp">
+        android:background="@drawable/border"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:layout_marginBottom="2dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Date: "
-                android:textColor="@color/black"
-                android:textSize="20dp" />
-
-            <TextView
-                android:id="@+id/mydate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="03/09/22"
-                android:textColor="@color/black"
-                android:textSize="16dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
-            android:orientation="horizontal">
+            android:text="Date :"
+            android:id="@+id/datetital"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Breakfast: "
-                android:textColor="@color/black"
-                android:textSize="20dp" />
-
-            <TextView
-                android:id="@+id/myBreakfast"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="done"
-                android:textColor="@color/black"
-                android:textSize="16dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:orientation="horizontal">
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@+id/datetital"
+            android:text="DD/MM/YYYY"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:id="@+id/mydate"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Lunch: "
-                android:textColor="@color/black"
-                android:textSize="20dp" />
-
-            <TextView
-                android:id="@+id/myLunch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="done"
-                android:textColor="@color/black"
-                android:textSize="16dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:orientation="horizontal">
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:text="Breakfast :"
+            android:id="@+id/breaktital"
+            android:layout_below="@+id/datetital"
+            android:textColor="#E6000000"
+            android:textSize="15dp"
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Snacks: "
-                android:textColor="@color/black"
-                android:textSize="20dp" />
+            />
 
-            <TextView
-                android:id="@+id/mySnacks"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1 bread pakora"
-                android:textColor="@color/black"
-                android:textSize="16dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/myBreakfast"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:orientation="horizontal">
+            android:layout_below="@+id/datetital"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/breaktital"
+            android:text="done"
+            android:textColor="#E6000000"
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Dinner: "
-                android:textColor="@color/black"
-                android:textSize="20dp" />
+            android:textSize="14dp" />
 
-            <TextView
-                android:id="@+id/myDinner"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="done"
-                android:textColor="@color/black"
-                android:textSize="16dp" />
+        <TextView
+            android:id="@+id/lunchtital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/breaktital"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="8dp"
+            android:text="Lunch :"
 
-        </LinearLayout>
+            android:textColor="#E6000000"
+            android:textSize="15dp"
 
-    </LinearLayout>
+            />
+
+        <TextView
+            android:id="@+id/myLunch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/breaktital"
+            android:layout_marginLeft="38dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/lunchtital"
+            android:text="done"
+            android:textColor="#E6000000"
+
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/snacktital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lunchtital"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="8dp"
+            android:text="Snacks :"
+
+            android:textColor="#E6000000"
+            android:textSize="15dp"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="31dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/lunchtital"
+            android:layout_toRightOf="@+id/snacktital"
+            android:text="done"
+            android:textColor="#E6000000"
+            android:textSize="14dp"
+
+            android:id="@+id/mySnacks"/>
+
+        <TextView
+            android:id="@+id/dinnertital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/snacktital"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="8dp"
+            android:text="Snacks :"
+
+            android:textColor="#E6000000"
+            android:textSize="15dp"
+            android:layout_marginBottom="10dp"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="38dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/snacktital"
+            android:layout_toRightOf="@+id/lunchtital"
+            android:text="done"
+            android:textColor="#E6000000"
+            android:textSize="14dp"
+
+            android:id="@+id/myDinner"/>
+
+
+    </RelativeLayout>
 
 
 </androidx.cardview.widget.CardView>

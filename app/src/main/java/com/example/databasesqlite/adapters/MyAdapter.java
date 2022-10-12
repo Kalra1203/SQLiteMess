@@ -64,6 +64,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.holder> {
                 i.putExtra("Dinner", modal.getDinner());
 
                 context.startActivity(i);
+
             }
         });
 

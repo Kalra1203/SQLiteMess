@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
@@ -20,13 +21,14 @@ import java.util.ArrayList;
 public class MyDbHandler extends SQLiteOpenHelper {
 
     public static final String DB_NAME = "Mess App";
-    public static final String TABLE_NAME = "KARN";
+    public static final String TABLE_NAME = "HARJINDER";
     public static final int DB_VERSION = 1;
     public static final String DATE = "Date";
     public static final String BREAKFAST = "Breakfast";
     public static final String LUNCH = "Lunch";
     public static final String SNACKS = "Snacks";
     public static final String DINNER = "Dinner";
+    Context context;
 
     public MyDbHandler(@Nullable Context context) {
         super(context, DB_NAME, null, DB_VERSION);
@@ -98,12 +100,15 @@ public class MyDbHandler extends SQLiteOpenHelper {
     }
 
     public void deleteData(String dates) {
+try{
+    SQLiteDatabase db = this.getWritableDatabase();
 
-        SQLiteDatabase db = this.getWritableDatabase();
+    db.delete(TABLE_NAME, "date=?", new String[]{dates});
 
-
-        db.delete(TABLE_NAME, "date=?", new String[]{dates});
-        db.close();
+    db.close();
+}catch (Exception e) {
+    Toast.makeText(context, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+}
     }
 }
 

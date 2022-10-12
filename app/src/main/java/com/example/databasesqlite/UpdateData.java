@@ -5,6 +5,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -52,28 +53,38 @@ public class UpdateData extends AppCompatActivity {
         updateData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Log.d("info","Editing date :"+  updateDate.getText().toString());
                 dbHandler.updateData(dateupdate, updateDate.getText().toString(), updateBreakfast.getText().toString(), updateLunch.getText().toString(), updateSnacks.getText().toString(), updateDinner.getText().toString());
 
                 Toast.makeText(UpdateData.this, "Data Updated..", Toast.LENGTH_SHORT).show();
 
                 Intent i = new Intent(UpdateData.this, MainActivity.class);
                 startActivity(i);
+                finish();
             }
         });
 
         deleteData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //dbHandler.deleteData(updateDate.getText().toString());
+
+
+                Log.d("info","Deleting date :"+  updateDate.getText().toString());
                 dbHandler.deleteData(updateDate.getText().toString());
                 Toast.makeText(UpdateData.this, "Deleted the course", Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(UpdateData.this, MainActivity.class);
                 startActivity(i);
+                finish();
             }
         });
 
 
     }
 
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 }

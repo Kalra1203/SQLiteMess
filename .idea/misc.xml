@@ -3,8 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Honey/AndroidStudioProjects/SQLiteMess/app/src/main/res/drawable/border.xml" value="0.1475" />
+        <entry key="..\:/Users/Honey/AndroidStudioProjects/SQLiteMess/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Honey/AndroidStudioProjects/SQLiteMess/app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
+        <entry key="..\:/Users/Honey/AndroidStudioProjects/SQLiteMess/app/src/main/res/layout/activity_update_data.xml" value="0.25" />
+        <entry key="..\:/Users/Honey/AndroidStudioProjects/SQLiteMess/app/src/main/res/layout/activity_view_data.xml" value="0.25" />
+        <entry key="..\:/Users/Honey/AndroidStudioProjects/SQLiteMess/app/src/main/res/layout/row.xml" value="0.264" />
         <entry key="..\:/Users/KARAN KALRA/AndroidStudioProjects/DatabaseSqlite/app/src/main/res/drawable/menu.xml" value="0.243" />
-        <entry key="..\:/Users/KARAN KALRA/AndroidStudioProjects/DatabaseSqlite/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/KARAN KALRA/AndroidStudioProjects/DatabaseSqlite/app/src/main/res/layout/activity_main.xml" value="0.25677083333333334" />
         <entry key="..\:/Users/KARAN KALRA/AndroidStudioProjects/DatabaseSqlite/app/src/main/res/layout/activity_splash_screen.xml" value="0.25677083333333334" />
         <entry key="..\:/Users/KARAN KALRA/AndroidStudioProjects/DatabaseSqlite/app/src/main/res/layout/activity_update_data.xml" value="0.25677083333333334" />
         <entry key="..\:/Users/KARAN KALRA/AndroidStudioProjects/DatabaseSqlite/app/src/main/res/layout/activity_view_data.xml" value="0.25677083333333334" />

@@ -43,4 +43,10 @@ public class ViewData extends AppCompatActivity {
         recyclerView.setAdapter(courseRVAdapter);
 
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 }
